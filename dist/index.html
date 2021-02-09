@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  <link href="./style.css" rel="stylesheet"></head>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,300&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
+
+  <body>
+    <div class="container">
+      <div class="tabs2" >
+        <div class="tabs__item">
+          <div class="tabs__header">
+              <div class="tabs__wrap">
+                  <div class="tabs__title">Login</div>
+              </div>
+              <div class="tabs__down">
+                  <i class="fas fa-chevron-down"></i>
+              </div>
+          </div>
+          <div class="tabs__content">
+            <div class="login-page-wrapp d-flex">
+              <div class="login-form-wrap d-flex align-items-center">
+                <div class="form-card card ml-auto">
+                  <div class="card-body">
+                    <h4 class="card-title">Please Login</h4>
+                    <form name="loginForm">
+                      <div class="form-group">
+                        <label for="email" class="login__label">Email address</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          aria-describedby="emailHelp"
+                          placeholder="Enter email"
+                          data-required="email"
+                          data-invalid-message="Please provide valid email example@example.com"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="password" class="login__label">Password</label>
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="password"
+                          placeholder="Password"
+                          data-required="password"
+                        />
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.login-form-wrap -->
+        <div class="tabs__item tabs__item_active">
+          <div class="tabs__header">
+              <div class="tabs__wrap">
+                  <div class="tabs__title">Register</div>
+              </div>
+              <div class="tabs__down">
+                  <i class="fas fa-chevron-down"></i>
+              </div>
+          </div>
+          <div class="tabs__content">
+            <div class="register-page-wrapp d-flex">
+              <div class="register-form-wrap d-flex align-items-center">
+                <div class="form-card card ml-auto">
+                  <div class="card-body">
+                    <h4 class="card-title">Please Register</h4>
+                    <form name="registerForm">
+                      <div class="form-group-ex">
+                        <label for="email_reg" class="register__label">Email address</label>
+                        <input
+                          type="email"
+                          class="form-control register__edit"
+                          id="email_reg"
+                          aria-describedby="emailHelp"
+                          placeholder="Enter email"
+                          data-required="email"
+                          data-invalid-message="Please provide valid email example@example.com"
+                        />
+                      </div>
+                      <div class="form-group-ex">
+                        <label for="password_reg" class="register__label">Password</label>
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="password_reg"
+                          placeholder="Password"
+                          data-required="password"
+                        />
+                      </div>
+                      <div class="form-group-ex">
+                        <label for="first_name" class="register__label">First name</label>
+                        <input class="form-control" id="first_name" placeholder="First name" data-required="true"
+                        />
+                      </div>
+                      <div class="form-group-ex">
+                        <label for="last_name" class="register__label">Last name</label>
+                        <input class="form-control" id="last_name" placeholder="Last name" data-required="true"
+                        />
+                      </div>
+                      <div class="form-group-ex">
+                        <label for="nickname" class="register__label">Nickname</label>
+                        <input class="form-control" id="nickname" placeholder="Nickname" data-required="true"
+                        />
+                      </div>
+                      <div class="gender-form-group-ex"> 
+                        <!-- input-field  -->
+                        <label for="gender_list" class="register_gender__label">Gender</label>
+                        <!--<input class="form-control" id="gender" placeholder="Gender"
+                        /> -->
+                        <ul id="gender_list" class="hide-on-med-and-down ml-auto gender_list">
+                          <li>
+                            <div class="input-field gender-select">
+                              <select id="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                              </select>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="form-group-ex">
+                        <label for="phone" class="register__label">Phone</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Phone" data-required="true"
+                        data-invalid-message="Please provide valid phone 9454561230"
+                        />
+                      </div>
+                      <div class="input-field form-group-ex">
+                        <label for="autocomplete-country" class="register__label">Country</label>
+                        <input type="text" class="autocomplete" id="autocomplete-country" data-required="true"
+                        />
+                      </div>
+                      <div class="input-field form-group-ex disabled_input" >
+                        <label for="autocomplete-city" class="register__label">City</label>
+                        <input type="text" class="autocomplete" id="autocomplete-city" data-required="true"
+                        />
+                      </div>
+                      <div class="form-group-ex" style="margin-bottom: 20px;">
+                        <label for="birth_date" class="register__label">Birth date</label>
+                        <input class="datepicker " id="birth_date" placeholder="Birth date" data-required="true"
+                        />
+                        <!-- data-date-format="mm/dd/yyyy" -->
+                      </div>
+                      <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.register-form-wrap -->
+      </div>
+      
+      <div class="login-greeting-screen d-flex align-items-center">
+        <div class="login-greeting-screen-text">
+          <h1 class="login-greeting-screen-title">Welcome to my app</h1>
+          <p class="login-greeting-screen-description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+            inventore non accusantium earum, illo dolores reprehenderit laborum
+            ratione quos doloribus repellat eligendi deleniti. Ipsum voluptate
+            ipsa exercitationem eaque totam. A.
+          </p>
+        </div>
+      </div>
+      <!-- /.login-greeting-screen -->
+    </div>
+    <!-- /.login-page-wrapp -->
+    </div>
+    
+  <script type="text/javascript" src="polyfill.9019ee6d29282f62dc22.js"></script><script type="text/javascript" src="app.9019ee6d29282f62dc22.js"></script></body>
+</html>
